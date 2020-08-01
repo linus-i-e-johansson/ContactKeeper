@@ -1,12 +1,10 @@
 const express = require('express');
-
-const app = express();
+const connectDB = require("./config/db");
 const PORT = process.env.PORT || 5000;
+const app = express();
 
-const indexRouter = require('./routes/index');
-const contactsRouter = require("./routes/contacts");
-const authRouter = require("./routes/auth");
-const usersRouter = require("./routes/users");
+// connect to database
+connectDB();
 
 app.use('/', require('./routes/index'));
 app.use("/api/contacts", require("./routes/contacts"));
