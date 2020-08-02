@@ -7,12 +7,13 @@ module.exports =(req, res, next) => {
 
     //check if not token
     if(!token){
-        return res.status(401).json({msg:"No token auth denied."});
+        return res.status(401).json({msg:"No token, auth denied."});
     }
     try {
         // once verfied the payload will be placed into decoded
         const decoded = JsonWebToken.verify(token,config.get("jwtSecret"));
         req.user = decoded.user;// setting the user in the payload to req.user, this gives us access to it in the route
+        console.log(decoded)
         next();
     }catch (e) {
         res.status(401).json({msg:"token is not valid."})
