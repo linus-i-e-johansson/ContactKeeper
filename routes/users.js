@@ -1,3 +1,4 @@
+//contains the register route
 const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
@@ -46,16 +47,18 @@ router.post("/",
 
       // creating the payload ie. the object we want to send in the token.
       const payload = {
-        user:user.id
+        user: {
+            id: user.id
+        }
       }
-      // Generation of json token
+        console.log("from user - Post user: "+ payload.user);
+      // Generation of json token, singing it.
       JsonWebToken.sign(payload, config.get("jwtSecret"),{expiresIn: 360000},(err, token) => {
         if(err){
           throw err;
         }
-        res.json({
-          token
-        });
+          console.log("Token singing successfull: ",token)
+        res.json({ token });
       });
     }catch (e) {
       console.error(e.message);
