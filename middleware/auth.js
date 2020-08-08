@@ -1,6 +1,9 @@
 const JsonWebToken = require("jsonwebtoken");
 const config = require("config");
 
+// this piece of middleware validates the token
+// and allows us to send the token within the header
+//when we want to access a protected route.
 module.exports = (req, res, next) => {
     // Get the token from the header.
     const token = req.header("x-auth-token") //checks if there is a token in the header, key to the token in the header.
