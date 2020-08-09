@@ -1,6 +1,6 @@
 import React,{Fragment, useContext} from 'react';
 import ContactContext from "../../context/contact/contactContext";
-
+import ContactItem from "./ContactItem";
 
 const Contacts = () => {
     // init context, this gives access to any state or action associated contactCtx
@@ -9,7 +9,7 @@ const Contacts = () => {
     return (
         <Fragment>
             {contacts.map((contact) => (
-                <h3>{contact.name}</h3>
+                <ContactItem key={contact._id} contact={contact} />
             ))}
         </Fragment>
     );

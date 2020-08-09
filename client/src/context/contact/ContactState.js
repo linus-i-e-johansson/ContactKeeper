@@ -22,7 +22,7 @@ const ContactState = props => {
             "phone": "333-333-333-333",
         },{
             "_id": 2,
-            "type": "personal",
+            "type": "professional",
             "name": "Amanda Johansson",
             "email": "a.johansson@gmail.com",
             "phone": "222-222-222-222",
