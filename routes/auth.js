@@ -12,7 +12,8 @@ const router = express.Router();
 //@route  GET api/auth
 //@desc   get logged in user
 //@access Private
-
+//@security middleware
+// the middleware is used to protect the private route.
 router.get("/", auth, async (req,res)=>{
    try {
         //get all user info except the password.
