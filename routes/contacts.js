@@ -83,8 +83,24 @@ const id = req.params.id;
 //@route  DELETE api/contacts:id
 //@desc   Delete a contact
 //@access Private
-router.delete("/:id",auth,async (req,res) => {
-
+router.delete("/:id", auth, async (req,res) => {
+    const id = req.params.id;
+    try {
+        let contact = await Contact.findById(id);//searches for specified contact.
+        if (!contact){// if there is no contact by that id.
+            return res.status(404).json({msg: "contact not found"});
+        }
+        //Makes sure the user owns the contact being modified.
+        if (contact.user.toString() !== req.user.id){
+            return res.status(401).json({msg:"Not authorized"}); //if they dont match.
+        }
+        //perform the actuall deletion of the contact.
+        await Contact.findByIdAndRemove(id);
+        res.json({msg:"Contact removed..."});
+    }catch (e) {
+        console.log(e.message);
+        res.status(500).send("Server error");
+    }
 });
 
 
