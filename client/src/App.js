@@ -8,7 +8,6 @@ import About from"./components/pages/About"
 const App = () => {
   return (
       <Router>
-
           <Fragment>
               <Navbar />
               My App..
