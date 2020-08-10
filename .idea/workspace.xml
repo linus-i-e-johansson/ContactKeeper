@@ -21,9 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="38882300-61b5-4e56-a840-9429f892cb54" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/contacts/ContactItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/contacts/Contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/Contacts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,7 @@
       <workItem from="1596748497835" duration="13000" />
       <workItem from="1596804088835" duration="7489000" />
       <workItem from="1596820802444" duration="23488000" />
-      <workItem from="1596976046631" duration="17292000" />
+      <workItem from="1596976046631" duration="21967000" />
     </task>
     <servers />
   </component>
@@ -155,6 +155,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596805958984" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1597047622005">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1597047622005" />
     <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1596985791560">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
