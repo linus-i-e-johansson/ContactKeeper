@@ -15,19 +15,19 @@ import {
 const ContactState = props => {
      const initialState = {
         contacts:[{
-            "_id": 1,
+            "id": 1,
             "type": "personal",
             "name": "Linus Johansson",
             "email": "l.johansson@gmail.com",
             "phone": "333-333-333-333",
         },{
-            "_id": 2,
+            "id": 2,
             "type": "professional",
             "name": "Amanda Johansson",
             "email": "a.johansson@gmail.com",
             "phone": "222-222-222-222",
         },{
-            "_id": 3,
+            "id": 3,
             "type": "personal",
             "name": "Rolf Johansson",
             "email": "r.johansson@gmail.com",
@@ -45,6 +45,12 @@ const ContactState = props => {
         });
     };
     // delete
+    const deleteContact = id => {
+        dispatch({
+            type:DELETE_CONTACT,
+            payload:id
+        })
+    }
     //set current
     //clear current
     //update
@@ -56,6 +62,7 @@ const ContactState = props => {
         {
             contacts:state.contacts,
             addContact,
+            deleteContact
         }
     }>
         {props.children}
