@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38882300-61b5-4e56-a840-9429f892cb54" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/contacts/ContactItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/contacts/ContactItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/layout/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/ContactState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/context/contact/contactReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/context/contact/contactReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,7 @@
       <workItem from="1596748497835" duration="13000" />
       <workItem from="1596804088835" duration="7489000" />
       <workItem from="1596820802444" duration="23488000" />
-      <workItem from="1596976046631" duration="22797000" />
+      <workItem from="1596976046631" duration="29248000" />
     </task>
     <servers />
   </component>
@@ -145,10 +147,10 @@
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596748482124" />
     <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596365517911" />
-    <state x="369" y="113" key="SettingsEditor" timestamp="1596963840401">
+    <state x="369" y="113" key="SettingsEditor" timestamp="1597059816451">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="369" y="113" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596963840401" />
+    <state x="369" y="113" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1597059816451" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1596370487774" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1596805958984">
       <screen x="0" y="0" width="1536" height="824" />
