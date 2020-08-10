@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const ContactItem = ({contact}) => {
     console.log(contact.type)
@@ -21,5 +22,9 @@ const ContactItem = ({contact}) => {
         </div>
     );
 };
+
+ContactItem.propTypes = {
+    contact: PropTypes.object.isRequired,
+}
 
 export default ContactItem;
