@@ -1,10 +1,20 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import ContactContext from "../../context/contact/contactContext";
 
 
 // the form is used for adding/deleteing a contact
 const ContactForm = props => {
     const contactContext = useContext(ContactContext);
+    const {addContact, current} = contactContext;
+
+    useEffect(() => {
+        if (current !== null){
+            setContact(current);
+        }else{
+            setContact({name:"",email:"",phone:"",type:"personal"});
+        }
+    },[contactContext,current]);
+
     const [contact, setContact] = useState({name:"",email:"",phone:"",type:"personal"});
     const {name, email, phone, type} = contact;
 
@@ -14,13 +24,13 @@ const ContactForm = props => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        contactContext.addContact(contact);
+        addContact(contact);
         setContact({name:"",email:"",phone:"",type:"personal"});
     }
 
     return (
         <form onSubmit={onSubmit}>
-            <h2 className={"text-primary"}>Add Contact</h2>
+            <h2 className={"text-primary"}>{current ? "Edit Contact" : "Add Contact"}</h2>
             <input type="text" placeholder={"name"} name={"name"} value={name} onChange={onChange} />
             <input type="email" placeholder={"Email"} name={"email"} value={email} onChange={onChange} />
             <input type="text" placeholder={"Phonenumber"} name={"phone"} value={phone} onChange={onChange} />
@@ -30,7 +40,8 @@ const ContactForm = props => {
             <input type="radio" name="type" value={"professional"} checked={type === "professional"} onChange={onChange}/>
             Professional{" "}
             <div>
-                <input type="submit" value={"Add Contact"} className={"btn btn-primary btn-block"}/>
+                <input type="submit" value={current ? "Update Contact" : "Add Contact"} className={"btn btn-primary btn-block"}/>
+                {current && <div><input type="submit" value={"Clear Contact"} className={"btn btn-light btn-block"} onClick={clearAll}/></div>}
             </div>
         </form>
     );
