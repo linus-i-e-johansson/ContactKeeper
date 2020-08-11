@@ -65,7 +65,13 @@ const ContactState = props => {
             type:CLEAR_CURRENT
         })
     }
-    //update
+    //update: updateContact gets called from the contactform and dispatches to the reducer
+    const updateContact = contact => {
+        dispatch({
+            type:UPDATE_CONTACT,
+            payload:contact
+        })
+    }
     //filter contact
     // clear filter
 
@@ -78,6 +84,7 @@ const ContactState = props => {
             deleteContact,
             setCurrent,
             clearCurrent,
+            updateContact,
         }
     }>
         {props.children}

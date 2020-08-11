@@ -5,7 +5,7 @@ import ContactContext from "../../context/contact/contactContext";
 // the form is used for adding/deleteing a contact
 const ContactForm = props => {
     const contactContext = useContext(ContactContext);
-    const {addContact, current, clearCurrent} = contactContext;
+    const {addContact, current, clearCurrent, updateContact} = contactContext;
 
     useEffect(() => {
         if (current !== null){
@@ -24,8 +24,12 @@ const ContactForm = props => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        addContact(contact);
-        setContact({name:"",email:"",phone:"",type:"personal"});
+        if (current === null){
+            addContact(contact);
+            setContact({name:"",email:"",phone:"",type:"personal"});
+        }else{
+            updateContact(contact);
+        }
     }
 
     const clearAll = () => {
