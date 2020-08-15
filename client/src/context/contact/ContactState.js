@@ -46,7 +46,7 @@ const ContactState = (props) => {
       dispatch({ type: CONTACT_ERROR, payload: e.response.msg });
     }
   };
-  // delete
+  // ##### delete a contact #####
   const deleteContact = async (id) => {
     try {
       await axios.delete(`/api/contacts/${id}`);
@@ -57,6 +57,27 @@ const ContactState = (props) => {
     } catch (e) {
       dispatch({ type: CONTACT_ERROR, payload: e.response.msg });
     }
+  };
+  //update: updateContact gets called from the contactform and dispatches to the reducer
+  const updateContact = async (contact) => {
+    const config = { headers: { "content-type": "application/json" } };
+    try {
+      const res = await axios.put(
+        `/api/contacts/${contact._id}`,
+        contact,
+        config
+      );
+    } catch (e) {
+      dispatch({
+        type: CONTACT_ERROR,
+        payload: e.response.msg,
+      });
+    }
+
+    dispatch({
+      type: UPDATE_CONTACT,
+      payload: contact,
+    });
   };
   //set current
   const setCurrent = (contact) => {
@@ -69,13 +90,6 @@ const ContactState = (props) => {
   const clearCurrent = () => {
     dispatch({
       type: CLEAR_CURRENT,
-    });
-  };
-  //update: updateContact gets called from the contactform and dispatches to the reducer
-  const updateContact = (contact) => {
-    dispatch({
-      type: UPDATE_CONTACT,
-      payload: contact,
     });
   };
   //filter contact
